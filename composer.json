@@ -1,0 +1,17 @@
+{
+    "name": "jonty/trello-clone",
+    "description": "A trello clone",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "infinityart",
+            "email": "jonty_wolf@hotmail.com"
+        }
+    ],
+    "require": {},
+    "autoload":{
+      "psr-4": {
+        "Weitjerock\\": "app"
+      }
+    }
+}
