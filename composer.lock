@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4cfc9f882290bb80eaea55394a3d3a3c",
-    "content-hash": "06100cc06de87ae02abc2747c06e6974",
+    "hash": "191f9d5015f2318dbc1612d576c6dccb",
+    "content-hash": "a04e45b4998f13016911058528f7a35d",
     "packages": [
         {
             "name": "filp/whoops",
@@ -67,6 +67,51 @@
                 "whoops"
             ],
             "time": "2017-11-23 18:22:44"
+        },
+        {
+            "name": "patricklouys/http",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PatrickLouys/http.git",
+                "reference": "94920a93515081fb446bb27529f9aea6df159004"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PatrickLouys/http/zipball/94920a93515081fb446bb27529f9aea6df159004",
+                "reference": "94920a93515081fb446bb27529f9aea6df159004",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Http\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Patrick Louys",
+                    "email": "patrick@louys.ch",
+                    "role": "Creator / Main Developer"
+                }
+            ],
+            "description": "HTTP Component",
+            "keywords": [
+                "http",
+                "request",
+                "response"
+            ],
+            "time": "2016-08-18 15:47:28"
         },
         {
             "name": "psr/log",
