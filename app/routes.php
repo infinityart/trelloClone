@@ -6,9 +6,7 @@
 declare(strict_types = 1);
 
 return [
-    ['GET', '/', function () {
-        echo 'Hello World';
-    }],
+    ['GET', '/', ['TrelloClone\Handlers\Homepage', 'show']],
     ['GET', '/another-route', function () {
         echo 'This works too';
     }],
