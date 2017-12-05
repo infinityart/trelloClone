@@ -12,7 +12,7 @@ error_reporting(E_ALL);
 $environment = 'development';
 
 /**
- * Register the error handler
+ * Register the error handler.
  */
 $whoops = new \Whoops\Run;
 if ($environment !== 'production') {
@@ -24,9 +24,15 @@ if ($environment !== 'production') {
 }
 $whoops->register();
 
+
 $request = new \Http\HttpRequest($_GET, $_POST, $_COOKIE, $_FILES, $_SERVER);
 $response = new \Http\HttpResponse;
 
+/**
+ * Router start..
+ *
+ * @param \FastRoute\RouteCollector $r
+ */
 $routeDefinitionCallback = function (\FastRoute\RouteCollector $r) {
     $routes = include('routes.php');
     foreach ($routes as $route) {
@@ -34,6 +40,9 @@ $routeDefinitionCallback = function (\FastRoute\RouteCollector $r) {
     }
 };
 
+/**
+ * Dispatcher start.
+ */
 $dispatcher = \FastRoute\simpleDispatcher($routeDefinitionCallback);
 
 $routeInfo = $dispatcher->dispatch($request->getMethod(), $request->getPath());
@@ -52,7 +61,7 @@ switch ($routeInfo[0]) {
         $method = $routeInfo[1][1];
         $vars = $routeInfo[2];
 
-        $class = new $className;
+        $class = new $className($response);
         $class->$method($vars);
         break;
 }
