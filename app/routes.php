@@ -10,4 +10,5 @@ return [
     ['GET', '/another-route', function () {
         echo 'This works too';
     }],
+    ['GET', '/{slug}', ['TrelloClone\Handlers\Page', 'show']],
 ];

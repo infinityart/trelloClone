@@ -29,4 +29,11 @@ $injector->define('Mustache_Engine', [
     ],
 ]);
 
+$injector->define('TrelloClone\Page\FilePageReader', [
+    ':pageFolder' => __DIR__ . '/../public/pages',
+]);
+
+$injector->alias('TrelloClone\Page\PageReader', 'TrelloClone\Page\FilePageReader');
+$injector->share('TrelloClone\Page\FilePageReader');
+
 return $injector;
